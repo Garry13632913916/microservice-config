@@ -32,7 +32,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://eureka2001.pro.com:2001/eureka/,http://eureka2002.pro.com:2002/eureka/,http://eureka2003.pro.com:2003/eureka/
+      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
 info:
 
   groupId: $project.groupId$
@@ -74,7 +74,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://eureka2001.pro.com:2001/eureka/,http://eureka2002.pro.com:2002/eureka/,http://eureka2003.pro.com:2003/eureka/
+      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
 info:
 
   groupId: $project.groupId$
