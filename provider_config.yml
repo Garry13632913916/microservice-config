@@ -6,6 +6,8 @@ spring:
 server:
   port: 1004
   context-path: /
+  
+# 数据源配置
 spring:
   profiles: dev
   application: 
@@ -20,34 +22,29 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  thymeleaf:
-    cache: false
-  application:
-    name:  microservice-student
+     
 eureka:
   instance:
-    hostname: localhost
-    appname: microservice-student
-    instance-id: microservice-student:1004
-    prefer-ip-address: true
-  client:
-    service-url:
+    hostname: localhost  #eureka客户端主机实例名称
+    appname: microservice-student  #客户端服务名
+    instance-id: microservice-student:1004 #客户端实例名称
+    prefer-ip-address: true #显示IP
+  client: 
+    service-url: 
       defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
-info:
-
-  groupId: $project.groupId$
-
-  artifactId: $project.artifactId$
-
-  version: $project.version$
-
-  负责人: 张三
-
-  联系电话: 110
+       
+info: 
+   groupId: $project.groupId$
+   artifactId: $project.artifactId$
+   version: $project.version$
+   负责人: 张三
+   联系电话: 110
 ---
 server:
   port: 1004
   context-path: /
+  
+# 数据源配置
 spring:
   profiles: test
   application: 
@@ -62,27 +59,20 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  thymeleaf:
-    cache: false
-  application:
-    name:  microservice-student
+     
 eureka:
   instance:
-    hostname: localhost
-    appname: microservice-student
-    instance-id: microservice-student:1004
-    prefer-ip-address: true
-  client:
-    service-url:
+    hostname: localhost  #eureka客户端主机实例名称
+    appname: microservice-student  #客户端服务名
+    instance-id: microservice-student:1004 #客户端实例名称
+    prefer-ip-address: true #显示IP
+  client: 
+    service-url: 
       defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
-info:
-
-  groupId: $project.groupId$
-
-  artifactId: $project.artifactId$
-
-  version: $project.version$
-
-  负责人: 张三
-
-  联系电话: 110
+       
+info: 
+   groupId: $project.groupId$
+   artifactId: $project.artifactId$
+   version: $project.version$
+   负责人: 张三
+   联系电话: 110
